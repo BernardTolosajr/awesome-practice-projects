@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils';
 import expect from 'expect';
 import App from '../../plain/app.vue';
 
-//TODO: isolate this on testing
+// TODO: isolate this on testing
 window.localStorage = {};
 
 describe('App', () => {
@@ -10,7 +10,7 @@ describe('App', () => {
 
   beforeEach(() => {
     wrapper = mount(App);
-    wrapper.setData({ todos: [], state: 'all'});
+    wrapper.setData({ todos: [], state: 'all' });
   });
 
   it('can add todo', () => {
@@ -50,7 +50,7 @@ describe('App', () => {
   });
 
   it('can filter active todos', () => {
-    wrapper.setData({state: 'active'});
+    wrapper.setData({ state: 'active' });
 
     addTodo('eat');
     addTodo('sleep');
@@ -64,9 +64,9 @@ describe('App', () => {
   it('can filter completed todos', () => {
     wrapper.setData({
       todos: [
-        {id: 1, content: 'eat', completed: false},
-        {id: 2, content: 'play', completed: false},
-        {id: 3, content: 'sleep', completed: true}
+        { id: 1, content: 'eat', completed: false },
+        { id: 2, content: 'play', completed: false },
+        { id: 3, content: 'sleep', completed: true }
       ],
       state: 'completed'
     });
@@ -87,10 +87,10 @@ describe('App', () => {
   it('can clear completed todos', () => {
     wrapper.setData({
       todos: [
-        {id: 1, content: 'eat'},
-        {id: 2, content: 'play'},
-        {id: 3, content: 'sleep'}
-      ],
+        { id: 1, content: 'eat' },
+        { id: 2, content: 'play' },
+        { id: 3, content: 'sleep' }
+      ]
     });
 
     wrapper.find('ul > li:first-child .toggle').trigger('click');
@@ -117,7 +117,7 @@ describe('App', () => {
   });
 
   function addTodo(body) {
-    let newTodo = wrapper.find('#new-todo');
+    const newTodo = wrapper.find('#new-todo');
 
     newTodo.element.value = body;
     newTodo.trigger('input');

@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 import expect from 'expect';
-import AddTodo from '../../../plain/components/addtodo.vue';
+import AddTodo from '../../../plain/components/addtodo';
 
 describe('AddTodo', () => {
   let wrapper;
