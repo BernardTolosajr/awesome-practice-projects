@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 import expect from 'expect';
-import Todo from '../../../plain/components/todo';
+import Todo from 'plain/components/todo';
 
 describe('Todo', () => {
   it('emit onComplete event when checkbox is toggle', () => {
