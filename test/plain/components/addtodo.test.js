@@ -1,6 +1,8 @@
+'use strict';
+
 import { mount } from '@vue/test-utils';
 import expect from 'expect';
-import AddTodo from 'plain/components/addtodo';
+import AddTodo from 'plain/components/addTodo.vue';
 
 describe('AddTodo', () => {
   let wrapper;

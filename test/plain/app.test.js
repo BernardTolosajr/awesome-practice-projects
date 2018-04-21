@@ -1,3 +1,5 @@
+'use strict';
+
 import { mount } from '@vue/test-utils';
 import expect from 'expect';
 import App from '../../plain/app.vue';
